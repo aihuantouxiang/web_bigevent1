@@ -2,7 +2,7 @@
  * @Author: sharon simapingguo1@163.com
  * @Date: 2022-09-23 10:08:25
  * @LastEditors: sharon simapingguo1@163.com
- * @LastEditTime: 2022-09-23 16:23:06
+ * @LastEditTime: 2022-09-26 21:18:50
  * @FilePath: \大事件\assets\js\login.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -45,7 +45,7 @@ $(function(){
     e.preventDefault()
     $.ajax({
       method:'POST',
-      url:'http://www.liulongbin.top:3007/api/reguser',
+      url:'/api/reguser',
       data,
         success:function(res){
           if(res.status !==0){
@@ -63,7 +63,7 @@ $(function(){
     e.preventDefault()
     $.ajax({
       method:'POST',
-      url:'http://www.liulongbin.top:3007/api/login',
+      url:'/api/login',
       data:$(this).serialize(),
       success:function(res){
         if(res.status !==0){
